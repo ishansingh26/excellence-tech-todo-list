@@ -3,8 +3,27 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: [ './app.component.scss' ]
 })
-export class AppComponent {
-  title = 'To-Do-List';
+export class AppComponent{
+
+  newTodo: string;
+  todos: any;
+  todoObj: any;
+
+  constructor() {
+    this.newTodo = '';
+    this.todos = [];
+  }
+
+  addTodo() {
+    if(this.newTodo) {
+      this.todoObj = {
+        newTodo: this.newTodo,
+        completed: false
+      }
+      this.todos.push(this.todoObj);
+      this.newTodo = '';
+    }
+  }
 }
