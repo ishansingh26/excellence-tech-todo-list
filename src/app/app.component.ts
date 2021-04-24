@@ -18,11 +18,7 @@ export class AppComponent{
 
   addTodo() {
     if(this.newTodo) {
-      this.todoObj = {
-        newTodo: this.newTodo,
-        completed: false
-      }
-      this.todos.push(this.todoObj);
+      this.todos.push(this.newTodo);
       this.newTodo = '';
     }
   }
