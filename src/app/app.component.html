@@ -1,7 +1,7 @@
 <div class="todos">
   <h3>TODO List</h3>
   <div>
-    <form (submit)="addTodo()">
+    <form (submit)="addTodo()" autocomplete="off">
     <input [(ngModel)]="newTodo" class="textfield" name="newTodo">
       <button type="submit" class="todo-btn">Add Item</button>
     </form>
