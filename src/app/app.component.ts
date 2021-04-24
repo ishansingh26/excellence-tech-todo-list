@@ -9,7 +9,6 @@ export class AppComponent{
 
   newTodo: string;
   todos: any;
-  todoObj: any;
 
   constructor() {
     this.newTodo = '';
